@@ -45,7 +45,7 @@ public class GameController {
         if (directionToMove == DIRECTION.SOUTH)
             currentPosition.y = currentPosition.y - 1 ;
         if (directionToMove == DIRECTION.WEST)
-            currentPosition.y = currentPosition.x - 1 ;
+            currentPosition.x = currentPosition.x - 1 ;
         return currentPosition;
     }
 
