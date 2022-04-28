@@ -7,6 +7,7 @@ public class GameController {
     public class GameStatus {
         //TODO: Add status data
         public String playerName = "";
+        public Point position = new Point(0, 0);
     }
 
     GameStatus status;
@@ -38,9 +39,9 @@ public class GameController {
         return this.status;
     }
 
-    public Point move(DIRECTION directionToMove) {
+    public void move(DIRECTION directionToMove) {
         //TODO: Implement move
-        return new Point(4,4);
+       // return new Point(4,4);
     }
 
 }
