@@ -19,7 +19,7 @@ jobs:
       run: make cibuild
 
     - name: Publish Tests
-      if: always() && github.ref == 'refs/heads/develop'
+      if: always() && github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
