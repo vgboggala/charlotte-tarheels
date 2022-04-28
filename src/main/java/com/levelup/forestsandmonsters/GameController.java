@@ -39,9 +39,14 @@ public class GameController {
         return this.status;
     }
 
-    public void move(DIRECTION directionToMove) {
-        //TODO: Implement move
-       // return new Point(4,4);
+    public Point move(DIRECTION directionToMove) {
+        if (directionToMove == DIRECTION.NORTH)
+            currentPosition.y  = currentPosition.y + 1 ;     
+        if (directionToMove == DIRECTION.SOUTH)
+            currentPosition.y = currentPosition.y - 1 ;
+        if (directionToMove == DIRECTION.WEST)
+            currentPosition.y = currentPosition.x - 1 ;
+        return currentPosition;
     }
 
 }

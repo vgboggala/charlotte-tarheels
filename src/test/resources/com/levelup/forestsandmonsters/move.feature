@@ -15,5 +15,5 @@ Feature: ForestsAndMonsters
             | 10 | 3  | "EAST"               | "10,4"                 |
             | 10 | 10 | "NORTH"              | "10,10"                |
             | 1  | 1  | "SOUTH"              | "1,1"                  |
-            |1   | 1  | "WEST"               | "1,1"                  |
+            | 1  | 1  | "WEST"               | "1,1"                  |
             
