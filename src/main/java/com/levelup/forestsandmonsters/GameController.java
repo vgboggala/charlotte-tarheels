@@ -11,8 +11,14 @@ public class GameController {
 
     GameStatus status;
 
+    public Point currentPosition;
+
     public GameController() {
         status = new GameStatus();
+    }
+
+    public void setCurrentPosition(int x, int y) {
+        this.currentPosition = new Point(x,y);
     }
 
     public enum DIRECTION { 
@@ -34,7 +40,7 @@ public class GameController {
 
     public Point move(DIRECTION directionToMove) {
         //TODO: Implement move
-        return null;
+        return new Point(4,4);
     }
 
 }

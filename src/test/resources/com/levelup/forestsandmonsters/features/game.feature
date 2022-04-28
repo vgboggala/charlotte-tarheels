@@ -10,4 +10,3 @@ Feature: ForestsAndMonsters
             | playerNameInput | playerNameOutput |  
             | "Erin"          | "Erin"           |
             | ""              | "Player"         |
-        
