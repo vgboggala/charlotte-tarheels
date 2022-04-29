@@ -49,20 +49,8 @@ public class GameController {
 
 
     public void move(DIRECTION directionToMove) {
-        Point tempPosition = new Point(currentPosition.x, currentPosition.y);
-        switch(directionToMove) {
-            case NORTH : tempPosition.y++;
-                            break;
-            case SOUTH : tempPosition.y--;
-                         break;
-            case EAST : tempPosition.x++;
-                          break;
-            case WEST : tempPosition.x--;
-                         break;
-        }
-        if(gameMap.isValidPosition(tempPosition)) {
-            setCurrentPosition(tempPosition.x, tempPosition.y);
-        }
+       GameCharacter character = new GameCharacter();
+       character.move(directionToMove);
     }
 
 }
