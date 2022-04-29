@@ -1,8 +1,6 @@
 package com.levelup.forestsandmonsters;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import org.junit.Test;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -32,7 +30,7 @@ public class MoveSteps {
 
     @Then("the Game sets the player's position to {string}")
     public void the_game_sets_the_player_s_position_to(String string) {
-        Point position = gc.getStatus().position; 
+        Point position = gc.currentPosition; 
         String output = ((int)position.getX())+","+((int)position.getY());
         assertEquals(string, output);
         // Write code here that turns the phrase above into concrete actions

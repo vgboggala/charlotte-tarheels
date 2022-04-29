@@ -7,6 +7,7 @@ import java.awt.Point;
 import javax.swing.text.Position;
 
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.Test;
 
@@ -49,4 +50,29 @@ public class GameControllerTest {
         assertEquals(3,controller.getCurrentPosition().x);
         //assertNotNull(controller.status);
     }
+
+    @Test
+    public void testMove(){
+        String direction = "NORTH";
+        GemeControllerSpy testObj = new GemeControllerSpy();
+        testObj.move(GameController.DIRECTION.valueOf(direction));
+
+        assertNotNull(testObj.status);
+    }
+
+    @Test
+    public void success_createPlayerTest(){
+        String inputName = "Tarheels";
+        GameController testObj = new GameController();
+        testObj.createPlayer(inputName);
+        assertEquals(inputName, testObj.status.playerName);
+    }
+    @Test
+    public void default_createPlayerTest(){
+        String inputName = "";
+        GameController testObj = new GameController();
+        testObj.createPlayer(inputName);
+        assertEquals("Player", testObj.status.playerName);
+    }
+
 }

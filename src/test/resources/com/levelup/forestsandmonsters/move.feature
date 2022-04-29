@@ -12,7 +12,7 @@ Feature: ForestsAndMonsters
             | 4  | 4  | "SOUTH"              | "4,3"                  |
             | 4  | 3  | "WEST"               | "3,3"                  |
             | 3  | 3  | "EAST"               | "4,3"                  |
-            | 10 | 3  | "EAST"               | "10,4"                 |
+            | 10 | 9  | "EAST"               | "10,9"                 |
             | 10 | 10 | "NORTH"              | "10,10"                |
             | 1  | 1  | "SOUTH"              | "1,1"                  |
             | 1  | 1  | "WEST"               | "1,1"                  |
