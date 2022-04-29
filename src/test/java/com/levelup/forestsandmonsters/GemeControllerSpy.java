@@ -6,6 +6,6 @@ public class GemeControllerSpy extends GameController{
 
     public GemeControllerSpy() {
         super();
-        setCurrentPosition(0,0);
+        
     }
 }

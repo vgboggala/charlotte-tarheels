@@ -40,7 +40,10 @@ public class GameController {
             status.playerName = DEFAULT_PLAYER_NAME;
         }
         character = new GameCharacter();
-        character.setPosition(status.position);
+        GameMap map = new GameMap();
+        map.init();
+        character.init(status.playerName, status.position, map);
+       // character.setPosition(status.position);
     }
 
     public GameStatus getStatus() {

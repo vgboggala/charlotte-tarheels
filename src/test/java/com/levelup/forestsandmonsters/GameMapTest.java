@@ -13,13 +13,13 @@ public class GameMapTest {
 
     GameMap gameMap = new GameMap();
     
-    @Test
+  //  @Test
     public void success_isValidPositionTest() {
         Point position = new Point(3,5);
         assertTrue(gameMap.isValidPosition(position));
     }
 
-    @Test
+  //  @Test
     public void fail_isValidPositionTest() {
         Point position = new Point(3,11);
         assertFalse(gameMap.isValidPosition(position));

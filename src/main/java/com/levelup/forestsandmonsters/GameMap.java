@@ -8,18 +8,22 @@ public class GameMap {
     public int MAX_COLS = 10;
     public int[][] map;
 
+    public GameMap() {
+        init();
+    }
+
     public void init() {
         createPositions();
     }
 
     public void createPositions() {
-        if (map == null && map.length == 0) {
+        if (map == null || map.length == 0) {
             map = new int[MAX_ROWS][MAX_COLS];
         }
     }
 
     public Point calculatePositions(Point currentPosition, DIRECTION directionToMove) {
-        Point tempPosition = currentPosition;
+        Point tempPosition = new Point(currentPosition.x,currentPosition.y);
         switch(directionToMove) {
             case NORTH : tempPosition.y++;
                             break;
