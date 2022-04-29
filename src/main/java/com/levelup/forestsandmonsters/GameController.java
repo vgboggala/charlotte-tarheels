@@ -11,21 +11,20 @@ public class GameController {
     static final String DEFAULT_PLAYER_NAME = "Player";
     public class GameStatus {
         public String playerName = "";
+        public Point position = new Point(1,1);
     }
 
     GameStatus status;
-
-    GameMap gameMap;
-
-    public Point currentPosition;
+    GameCharacter character;
+       
 
     public GameController() {
         status = new GameStatus();
-        gameMap = new GameMap();
+       
     }
 
-    public void setCurrentPosition(int x, int y) {
-        this.currentPosition = new Point(x,y);
+    public Point getStartPosition() {
+        return status.position;
     }
 
     public enum DIRECTION { 
@@ -40,7 +39,8 @@ public class GameController {
         else {
             status.playerName = DEFAULT_PLAYER_NAME;
         }
-
+        character = new GameCharacter();
+        character.setPosition(status.position);
     }
 
     public GameStatus getStatus() {
@@ -49,8 +49,9 @@ public class GameController {
 
 
     public void move(DIRECTION directionToMove) {
-       GameCharacter character = new GameCharacter();
        character.move(directionToMove);
+       status.position = character.currentPosition;
+       
     }
 
 }
